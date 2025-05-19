@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This is used to give a visual height*/
+  background-color: #fff;
+}
+
+.shadow-wrap {
+  border-radius: 5px;
+  background-color: #f0f2fb;
+  padding: 25px;
+}
+
+.form-wrap {
+  background-color: #fff;
+  padding: 70px;
+}
+
+.form-wrap form {
+  display: block;
+  width: 100%;
+}
+
+.form-wrap form label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+
+.form-wrap form input {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid #DAE1F5;
+  background-color: #fff;
+  color: #0b32b1;
+}
+
+#id_username {
+  margin-bottom: 30px;
+}
+
+.form-wrap button {
+  border-radius: 5px; 
+  background-color: #10182f;
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 12px 68px;
+  font-weight: 700;
+  border: none;
+  line-height: 26px;
+  margin-top: 30px;
+}
+
+.form-wrap button:hover{
+  background-color: #152453;
+  transition: 0.3s;
+  opacity: 0.95;
+}
+
+.signup-link {
+  color: #10182f;
+  font-size: 15px;
+  display: block;
+  line-height: 25px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.login-link {
+  color: #10182f;
+  font-size: 15px;
+  display: inline;
+  line-height: 25px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.account {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.account-verification {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.signup,
+.login {
+  display: inline-block;
+  color: #10182f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup:hover,
+.login:hover{
+  color: #0b32b1;
+  text-decoration: underline;
+}
