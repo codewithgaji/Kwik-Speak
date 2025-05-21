@@ -107,6 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'users.CustomUser' # This is to authenticate user creation using the self made class for it                                                                                                                                                                                                                                                                                                    
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
@@ -133,5 +134,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "/accounts/login/"
+LOGIN_REDIRECT_URL = "baseapp:home" # This will redirect the page to the baseapp homepage                                                                                                                                                                           
 LOGOUT_REDIRECT_URL = "/accounts/login/"

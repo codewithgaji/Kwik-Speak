@@ -24,9 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # I included their url paths
-    path('', include('django.contrib.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', include(('baseapp.urls', 'baseapp'), 'baseapp')), # This is called Mapping                                                                                                                                                                 
     path('lessons/', include('lessons.urls')),
     path('quizzes/', include('quizzes.urls')),
-    path('users/', include('users.urls')),
+    path('users/', include(('users.urls', 'users'), 'users')),
 ] + static(settings.STATIC_URL)

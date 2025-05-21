@@ -5,13 +5,18 @@
   <div class="form-wrap">
     <form class="login-form" method="POST">
       {% csrf_token %}
-      {{form_key.as_p}}
-      <button class="form-button">
-      Signup
+      <label>Email</label>
+      <input type="email" name="username" required>
+
+      <label>Password</label>
+      <input type="password" name="password" required>
+      {{form}}
+      <button class="form-button" type="submit">
+      Login
       </button>
     </form>                                                                                                                                                                               
-    <h4 class="account-verification">Already have an account?</h4>
-    <a href="{% url 'baseapp:login' %}" class="login">Login</a>
+    <h4 class="account-verification">Don't have an account?</h4>
+    <a href="{% url 'users:signup' %}" class="signup">Signup</a>
   </div>
   
 </div>

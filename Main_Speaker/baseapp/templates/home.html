@@ -10,7 +10,15 @@
   <link rel="stylesheet" href="{% static 'styles/home.css' %}">
 </head>
 <body>
-  <div class="header">                                                                                                                                                                                         
+  <div class="header">
+    <div class="loginout-page">
+      <a href="{% url 'login' %}" class="loginhome">Login</a>
+      <h3>/</h3>
+      <form method="POST" action="{% url 'logout' %}" >
+        {% csrf_token %}
+        <button class="logouthome" type="submit">Logout</button>
+      </form>
+    </div>                                                                                                                                                                                         
 
   </div>
 
@@ -55,11 +63,7 @@
   </div>
 
   <div class="rights-reserved">
-    <a href="{% url 'login' %}">Login</a>
-    <form method="POST" action="{% url 'logout' %}">
-      {% csrf_token %}
-      <button type="submit">Logout</button>
-    </form>
+    
 
   </div>
   
