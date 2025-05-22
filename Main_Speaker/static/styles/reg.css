@@ -29,21 +29,26 @@ body {
   width: 100%;
 }
 
-.form-wrap form label {
+.emailfield,
+.passwordfield {
   margin-bottom: 5px;
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
 }
 
+.emailfield {
+  margin-right: 29px;
+}
 
 .form-wrap form input {
   padding: 12px 20px;
   border-radius: 5px;
+  margin-bottom: 10px;
   border: 1px solid #DAE1F5;
   background-color: #fff;
   color: #0b32b1;
-}
+} 
 
 #id_username {
   margin-bottom: 30px;
@@ -59,12 +64,12 @@ body {
   font-weight: 700;
   border: none;
   line-height: 26px;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .form-wrap button:hover{
   background-color: #152453;
-  transition: 0.3s;
+  transition: 0.5s;
   opacity: 0.95;
 }
 
@@ -118,4 +123,30 @@ body {
 .login:hover{
   color: #0b32b1;
   text-decoration: underline;
+}
+
+.form-error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.emailfield1,
+.first_namefield,
+.last_namefield,
+.pass1field,
+.pass2field {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.emailfield1 {
+  margin-right: 35px;
+}
+
+.pass1field {
+  margin-right: 7px;
 }
