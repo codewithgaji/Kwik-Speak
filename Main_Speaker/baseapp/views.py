@@ -12,21 +12,3 @@ def home(request):
   return render(request, "home.html",  {})
 
 
-# This is the Signup view
-def autview(request):
-  if request.method == "POST":
-    form = UserCreationForm(request.POST)
-    if form.is_valid():
-      user = form.save()
-      login(request, user)
-      redirect("baseapp:home")
-
-  else:
-    form = UserCreationForm()
-
-  context = {
-    "form_key": form
-  }
-
-  return render(request, "registration/signup.html", context)
-

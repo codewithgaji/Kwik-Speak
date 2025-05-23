@@ -6,13 +6,7 @@
     <form method="POST" novalidate><!--The 'novalidate' is so HTML5 doesn't validate and leaves it to Django-->
     {% csrf_token %}
 
-    <label for="id_email"  class="emailfield1">Email:</label>
-    {{form_key.email}}
-    {% for error in form_key.email.errors %} <!--All errors/invalidation in the email field should be written under its field-->
-      <p class="form-error">{{ error }}</p>
-    {% endfor %} <br>
-
-      <label for="id_first_name" class="first_namefield">First Name:</label>
+    <label for="id_first_name" class="first_namefield">First Name:</label>
     {{form_key.first_name}}
     {% for error in form_key.first_name.errors %} <!--All errors/invalidation in the email field should be written under its field-->
       <p class="form-error">{{ error }}</p>
@@ -21,6 +15,12 @@
     <label for="id_last_name" class="last_namefield">Last Name:</label>
     {{form_key.last_name}}
     {% for error in form_key.last_name.errors %} <!--All errors/invalidation in the email field should be written under its field-->
+      <p class="form-error">{{ error }}</p>
+    {% endfor %} <br>
+
+    <label for="id_email"  class="emailfield1">Email:</label>
+    {{form_key.email}}
+    {% for error in form_key.email.errors %} <!--All errors/invalidation in the email field should be written under its field-->
       <p class="form-error">{{ error }}</p>
     {% endfor %} <br>
 

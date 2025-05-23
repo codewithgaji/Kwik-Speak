@@ -32,7 +32,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
   USERNAME_FIELD = 'email'
   REQUIRED_FIELDS = ['first_name', 'last_name']
 
-  objects = CustomUserManager()
+  objects = CustomUserManager() # This tells Django to use my Custom User manager instead of the models manager
 
   def __str__(self):
     return self.email

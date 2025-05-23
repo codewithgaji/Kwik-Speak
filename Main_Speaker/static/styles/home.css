@@ -82,7 +82,8 @@
 
 .orators {
   background-color: grey;
-  height: 100%;
+  width: 100%;
+  height: auto;
   display: grid;
   justify-content: right;
   grid-template-columns: 1fr;
@@ -123,14 +124,24 @@
 
 .speaker-image {
   background-color: red;
-  height: 140%;
+  width: 100%;
+  height: auto;
   display: flex;
+  padding: 10px;
   flex-direction: row;
-  align-items: stretch;
+  align-items: center;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 40px;
+}
+
+.speaker {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .wise-words {
