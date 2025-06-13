@@ -1,51 +1,63 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
-<div class="shadow-wrap">
-  <div class="form-wrap">
-    <form method="POST" novalidate><!--The 'novalidate' is so HTML5 doesn't validate and leaves it to Django-->
-    {% csrf_token %}
+<div class="signup-wrapper">
+  <!-- <div class="motto">
+    <h4 class="motto-words">From Thought to Voice</h4>
+  </div> -->
+  <div class="shadow-wrap">
+    <div class="form-wrap">
+      <div class="kwik-speak-logo">
+        <img class="kwik-logo"  src="{%static 'images/real-logo.png'%}" alt="">
+      </div>
+      <h4 class="welcome-message-signup">Welcome to Kwik Speak!</h4>
+      <form method="POST" novalidate><!--The 'novalidate' is so HTML5 doesn't validate and leaves it to Django-->
+      {% csrf_token %}
 
-    <label for="id_first_name" class="first_namefield">First Name:</label>
-    {{form_key.first_name}}
-    {% for error in form_key.first_name.errors %} <!--All errors/invalidation in the email field should be written under its field-->
-      <p class="form-error">{{ error }}</p>
-    {% endfor %} <br>
+      <label for="id_first_name" class="first_namefield">First Name:</label>
+      {{form_key.first_name}}
+      {% for error in form_key.first_name.errors %} <!--All errors/invalidation in the email field should be written under its field-->
+        <p class="form-error">{{ error }}</p>
+      {% endfor %} <br>
 
-    <label for="id_last_name" class="last_namefield">Last Name:</label>
-    {{form_key.last_name}}
-    {% for error in form_key.last_name.errors %} <!--All errors/invalidation in the email field should be written under its field-->
-      <p class="form-error">{{ error }}</p>
-    {% endfor %} <br>
+      <label for="id_last_name" class="last_namefield">Last Name:</label>
+      {{form_key.last_name}}
+      {% for error in form_key.last_name.errors %} <!--All errors/invalidation in the email field should be written under its field-->
+        <p class="form-error">{{ error }}</p>
+      {% endfor %} <br>
 
-    <label for="id_email"  class="emailfield1">Email:</label>
-    {{form_key.email}}
-    {% for error in form_key.email.errors %} <!--All errors/invalidation in the email field should be written under its field-->
-      <p class="form-error">{{ error }}</p>
-    {% endfor %} <br>
+      <label for="id_email"  class="emailfield1">Email:</label>
+      {{form_key.email}}
+      {% for error in form_key.email.errors %} <!--All errors/invalidation in the email field should be written under its field-->
+        <p class="form-error">{{ error }}</p>
+      {% endfor %} <br>
 
-    <label for="id_password1" class="pass1field">Password:</label>
-    {{form_key.password1}}
-    {% for error in form_key.password1.errors %} <!--All errors/invalidation in the email field should be written under its field-->
-      <p class="form-error">{{ error }}</p>
-    {% endfor %} <br>
+      <label for="id_password1" class="pass1field">Password:</label>
+      {{form_key.password1}}
+      {% for error in form_key.password1.errors %} <!--All errors/invalidation in the email field should be written under its field-->
+        <p class="form-error">{{ error }}</p>
+      {% endfor %} <br>
 
-    <label for="id_password2" class="pass2field">Confirm Password:</label>
-    {{form_key.password2}}
-    {% for error in form_key.password2.errors %} <!--All errors/invalidation in the email field should be written under its field-->
-      <p class="form-error">{{ error }}</p>
-    {% endfor %} <br>
+      <label for="id_password2" class="pass2field">Confirm Password:</label>
+      {{form_key.password2}}
+      {% for error in form_key.password2.errors %} <!--All errors/invalidation in the email field should be written under its field-->
+        <p class="form-error">{{ error }}</p>
+      {% endfor %} <br>
 
-    <button class="form-button">
-      Signup
-      </button>
-    </form>                                                                                                                                                                               
-    <h4 class="account-verification">Already have an account?</h4>
-    <a href="{% url 'users:login' %}" class="login">Login</a>
+      <button class="form-button">
+        Signup
+        </button>
+      </form>                                                                                                                                                                               
+      <h4 class="account-verification">Already have an account?</h4>
+      <a href="{% url 'users:login' %}" class="login">Sign in</a>
 
-    </form> 
+      </form> 
+    </div>
+    
   </div>
-  
+
 </div>
 {% endblock content %}
 

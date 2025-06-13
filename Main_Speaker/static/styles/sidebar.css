@@ -1,0 +1,22 @@
+.sidebar {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  row-gap: 10px;
+  align-items: stretch;
+  box-shadow: 3px 2px 0.6px lightgray;
+}  
+
+.sidebar div{
+  margin-top: 20px;
+}
+
+
+.sidebar div:hover {
+  background-color: gray;
+}

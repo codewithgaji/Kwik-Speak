@@ -1,0 +1,91 @@
+.header {
+  background-color: white;
+  border-bottom-width: 1px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  display: grid;
+  z-index: 100;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 3px 2px 0.6px lightgray;
+}
+
+
+.header div {
+  height: 32px;
+  margin-right: 10px;
+}
+
+.header div:hover {
+  background-color: gray;
+}
+
+.home,
+.lessons,
+.quizzes {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: start;
+  align-items: center;
+}
+
+.home {
+  margin-left: 10px;
+}
+
+.home-icon,
+.logout-icon,
+.quizzes-icon,
+.lessons-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.home-text,
+.lessons-text,
+.quizzes-text {
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  margin-top: -0.8px;
+}
+
+.loginout-page {
+  display: flex;
+  margin-right: 5px;
+  justify-content: right;
+  align-items: center;
+  margin: 5px;
+}
+
+
+
+
+
+
+/* 
+.loginhome {
+  font-weight: 700;
+  border: none;
+  text-decoration: none;
+  color: black;
+  line-height: 20px;
+}
+
+.loginhome:hover {
+  color: yellow;
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.loginhome {
+  padding-right: 5px;
+} */
+

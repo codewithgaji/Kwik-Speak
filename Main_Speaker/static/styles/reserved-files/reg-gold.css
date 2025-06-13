@@ -17,12 +17,27 @@ body {
 .signup-wrapper {
   height: 100vh;
   width: 100%;
-  background: url("/static/images/Speaker-2.jpg");
+  background: url("/static/images/speaker-5.avif");
   background-size: cover;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
+}
 
+.motto {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.motto-words {
+  font-family: 'Pacifico', cursive;
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 19px;
+  color: #ffd001;
 }
 
 .shadow-wrap {
@@ -31,7 +46,7 @@ body {
   max-height: 650px;
   flex-direction: row;
   border-radius: 20px;
-  background-color: rgba(2, 2, 173, 0.699);
+  background-color: rgba(235, 73, 9, 0.884);
   padding: 20px;
 }
 
@@ -42,30 +57,13 @@ body {
 }
 
 .welcome-message {
-  margin-bottom: -2px;
-  line-height: 35px;
-  font-weight: 700;
-  font-size: 25px;
-  color: white;
-}
-
-.welcome-message-signup {
-  margin-bottom: 20px;
-  line-height: 35px;
-  font-weight: 700;
-  font-size: 25px;
-  color: white;
-}
-
-.missed-you {
-  font-size: 10px;
   margin-bottom: 15px;
-  margin-left: 5px;
-  color: white;
+  line-height: 35px;
+  font-weight: 700;
 }
 
 .form-wrap {
-  background-color: rgb(4, 72, 160);
+  background-color: rgba(228, 139, 6, 0.932);
   max-width: 400px;
   display: inline-block;
   padding: 50px;
@@ -76,13 +74,12 @@ body {
 .form-wrap form {
   display: block;
   width: 100%;
-  color: white;
 }
 
 .emailfield,
 .passwordfield {
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 26px;
 }
@@ -94,20 +91,21 @@ body {
 .form-wrap form input {
   padding: 12px 20px;
   border-radius: 5px;
+  border-color: #be6702;
   margin-bottom: 10px;
-  border-width: 1.5px;
-  box-shadow: 2px 2px 1.4px gray;
-  border-style: solid;
-  border-color: #032288;
+  border: 2px solid rgb(255, 238, 0);
   background-color: rgb(233, 231, 231);
-  color: #0b32b1;
+  color: #be6702;
 } 
 
+#id_username {
+  margin-bottom: 30px;
+}
 
 .form-wrap button {
   border-radius: 10px; 
-  background-color: #10182f;
-  box-shadow: 1px 1px 0.3px gray;
+  background-color: #f8cc05;
+  box-shadow: 2px 2px 0.3px rgb(250, 113, 2);
   color: #FFF;
   text-align: center;
   font-size: 16px;
@@ -158,11 +156,9 @@ body {
   margin-top: 10px;
 }
 
-
 .account-verification {
   display: inline-block;
   margin-top: 10px;
-  color: white;
 }
 
 .signup,
@@ -171,12 +167,11 @@ body {
   color: #10182f;
   text-decoration: none;
   font-weight: 600;
-  color: white;
 }
 
 .signup:hover,
 .login:hover{
-  color: #20b5f0;
+  color: #0b32b1;
   text-decoration: underline;
 }
 

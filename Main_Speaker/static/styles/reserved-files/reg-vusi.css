@@ -42,30 +42,13 @@ body {
 }
 
 .welcome-message {
-  margin-bottom: -2px;
-  line-height: 35px;
-  font-weight: 700;
-  font-size: 25px;
-  color: white;
-}
-
-.welcome-message-signup {
-  margin-bottom: 20px;
-  line-height: 35px;
-  font-weight: 700;
-  font-size: 25px;
-  color: white;
-}
-
-.missed-you {
-  font-size: 10px;
   margin-bottom: 15px;
-  margin-left: 5px;
-  color: white;
+  line-height: 35px;
+  font-weight: 700;
 }
 
 .form-wrap {
-  background-color: rgb(4, 72, 160);
+  background-color: rgb(9, 107, 235);
   max-width: 400px;
   display: inline-block;
   padding: 50px;
@@ -76,7 +59,6 @@ body {
 .form-wrap form {
   display: block;
   width: 100%;
-  color: white;
 }
 
 .emailfield,
@@ -95,14 +77,14 @@ body {
   padding: 12px 20px;
   border-radius: 5px;
   margin-bottom: 10px;
-  border-width: 1.5px;
-  box-shadow: 2px 2px 1.4px gray;
-  border-style: solid;
-  border-color: #032288;
+  border: 1px solid blue;
   background-color: rgb(233, 231, 231);
   color: #0b32b1;
 } 
 
+#id_username {
+  margin-bottom: 30px;
+}
 
 .form-wrap button {
   border-radius: 10px; 
@@ -158,11 +140,9 @@ body {
   margin-top: 10px;
 }
 
-
 .account-verification {
   display: inline-block;
   margin-top: 10px;
-  color: white;
 }
 
 .signup,
@@ -171,12 +151,11 @@ body {
   color: #10182f;
   text-decoration: none;
   font-weight: 600;
-  color: white;
 }
 
 .signup:hover,
 .login:hover{
-  color: #20b5f0;
+  color: #0b32b1;
   text-decoration: underline;
 }
 

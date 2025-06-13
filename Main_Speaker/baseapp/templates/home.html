@@ -8,22 +8,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kwik Speak</title>
   <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/sidebar.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/general.css' %}">
 </head>
 <body>
   <div class="header">
+    <div class="home">
+      <img class="home-icon" src="{% static 'images/icons/home.png' %}" alt="">
+      <p class="home-text">Home</p>
+    </div>
+    <div class="lessons">
+      <img class="lessons-icon" src="{% static 'images/icons/lesson-icons.jpg' %}" alt="">
+      <p class="lessons-text">Lessons</p>
+    </div>
+    <div class="quizzes">
+      <img class="quizzes-icon" src="{% static 'images/icons/quiz-icon.jpg' %}" alt="">
+      <p class="quizzes-text">Quizzes</p>
+    </div>
+
     <div class="loginout-page">
-      <a href="{% url 'login' %}" class="loginhome">Login</a>
-      <h3>/</h3>
       <form method="POST" action="{% url 'logout' %}" >
         {% csrf_token %}
-        <button class="logouthome" type="submit">Logout</button>
+        <button class="logouthome" type="submit">
+          <img class="logout-icon" 
+          src="{% static 'images/icons/logout-icon.png' %}" alt="">
+        </button>
       </form>
     </div>                                                                                                                                                                                         
 
   </div>
+  <div class="sidebar">
+    <div>Bookmarks</div>
+    <div>Quizzes</div>
+    <div>Submissions</div>
+  </div>
 
   <div class="logo">
-
+    <img class="kwik-logo1" src="{% static 'images/logo1.png' %}" alt="">
   </div>
 
   <div class="content">
@@ -34,15 +56,40 @@
 
       <div class="speech-info">
         <div class="info">
-
+          <div class="info-header">
+            💡 1. Think Before You Speak
+          </div>
+          <h4 class="info-message">
+            Take a moment to collect your thoughts. 
+            Organize what you want to say in your mind before you say it. 
+            This helps in delivering your message clearly and confidently, 
+            without rambling. 
+          </h4>
         </div>
 
         <div class="info">
-
+          <div class="info-header">
+            💡2. Use Simple and Clear Words
+          </div>
+          <h4 class="info-message">
+            Avoid overcomplicating your message with jargon or big words. 
+            Simple language is usually more effective and relatable. 
+            People understand you better when your message is straightforward.
+          </h4>
+          
         </div>
         
         <div class="info">
-
+          <div class="info-header">
+            💡 3. Practice Active Listening
+          </div>
+          <h4 class="info-message">
+            Engage with the person you’re talking to. 
+            Show that you’re listening by nodding, paraphrasing, or asking clarifying questions. 
+            This builds rapport and helps you respond thoughtfully, 
+            which makes your communication more articulate.
+          </h4>
+          
         </div>
 
       </div>
@@ -51,16 +98,18 @@
 
     <div class="orators">
       <div class="speaker-image">
-        <img class= "speaker" src="{% static 'images/Speaker-2.jpg' %}" alt="image not found">
-
+        <img class= "speaker" src="{% static 'images/vusi-said.jpg' %}" alt="image not found">
       </div>
 
-      <div class="wise-words">
-
+      <div class="wise-words-wrapper">
+        <div class="wise-words">
+          <h4 class="theword">
+            Speaking is not just about conveying information; it's about building relationships,
+            evoking emotions, and inspiring action.
+          </h4>
+        </div>
       </div>
-
     </div>
-
   </div>
 
   <div class="rights-reserved">
@@ -68,7 +117,23 @@
 
   </div>
   
+
+
+
+
+
+  <div class="bottom">
+
+  </div>
 </body>
 </html>
 
 {% endblock content %}
+
+
+
+
+
+
+
+<!-- <a href="{% url 'login' %}" class="loginhome">Login</a> -->

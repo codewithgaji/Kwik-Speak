@@ -1,24 +1,39 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="shadow-wrap">
-  <div class="form-wrap">
-    <form class="login-form" method="POST">
-      {% csrf_token %}
-      <label class="emailfield">Email:</label>
-      <input type="email" name="username" required><br>
+<div class="signup-wrapper">
+  <!-- <div class="motto">
+    <h4 class="motto-words">From Thought to Voice</h4>
+  </div> -->
+  <div class="shadow-wrap">
+    <div class="form-wrap">
+      <div>
+        <img class="kwik-logo" src="{% static 'images/logo1.png' %}" alt="logo not found">
+      </div>
+      <h4 class="welcome-message">
+        Welcome Back!
+      </h4>
+      <h6 class="missed-you">We missed you</h6>
+      <form class="login-form" method="POST">
+        {% csrf_token %}
+        <label class="emailfield">Email:</label>
+        <input type="email" name="username" placeholder="johndoe@gmail.com" required><br>
 
-      <label class="passwordfield">Password:</label>
-      <input type="password" name="password" required><br>
-      <button class="form-button" type="submit">
-      Login
-      </button><br>
-    </form>                                                                                                                                                                               
-    <h4 class="account-verification">Don't have an account?</h4>
-    <a href="{% url 'users:signup' %}" class="signup">Signup</a>
+        <label class="passwordfield">Password:</label>
+        <input type="password" name="password" placeholder="1234***" required><br>
+        <button class="form-button" type="submit">
+        Sign in
+        </button><br>
+      </form>
+      <h4 class="account-verification">Don't have an account?</h4>
+      <a href="{% url 'users:signup' %}" class="signup">Signup</a>                                                                                                                                                                              
+      
+    </div>
+    
   </div>
-  
 </div>
+
   
 
 {% endblock content %}

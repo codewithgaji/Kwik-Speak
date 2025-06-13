@@ -1,63 +1,28 @@
 /* static/css/navbar.css */
 
-.header {
-  background-color: blue;
-  display: flex;
-  height: 40px;
-  flex-direction: row;
-  justify-content: right;
-  flex: 1;
-  margin-top: 0;
-  margin-left: 0;
-  margin-bottom: 4px;
+body {
+  padding-top: 50px;
 }
 
-.loginout-page {
-  display: flex;
-  width: 80px;
-  height: 25px;
-  border-radius: 5px;
-  border-width: 2px;
-  justify-content: right;
-  align-items: center;
-  margin: 5px;
-}
 
-.loginhome,
-.logouthome {
-  font-weight: 700;
-  border: none;
-  text-decoration: none;
-  color: black;
-  line-height: 20px;
-}
 
-.loginhome:hover,
-.logouthome:hover {
-  color: yellow;
-  text-decoration: underline;
-  transition: 0.2s;
-}
-
-.loginhome {
-  padding-right: 5px;
-}
-
-.logouthome {
-  background-color: transparent;
-  cursor: pointer;
-}
 
 .logo {
-  background-color: green;
   height: 100px;
   margin-left: 150px;
   margin-right: 150px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex: 1;
   align-items: center;
+  flex: 1;
+}
+
+.kwik-logo1 {
+  max-height: 230%;
+  max-width: 300%;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .content {
@@ -70,24 +35,24 @@
 
 .communication-tips {
   background-color: purple;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 0.5fr 3fr;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   column-gap: 10px;
-  flex-direction: row;
-  justify-content: left;
-  align-items: start;
+  padding: 10px;
+  justify-content: center;
+  align-items:center;
   margin-top: 15px;
+
 }
 
+
 .orators {
-  background-color: grey;
   width: 100%;
   height: auto;
   display: grid;
   justify-content: right;
-  grid-template-columns: 1fr;
-  flex-direction: column;
+  grid-template-rows: 1fr 1fr;
   align-items: start;
   margin-top: 15px;
   margin-right: 0;
@@ -100,70 +65,119 @@
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 60px;
   margin-left: 0;
   margin-bottom: 4px;
 }
 
 .speech-info {
   background-color: blue;
-  height: 580px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-right: 10px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: -10px;
 }
 
-.bookmarks {
+
+/* .bookmarks {
   background-color: lightblue;
   height: 580px;
   display: block;
   margin-top: 10px;
   margin-left: 10px;
-}
+} */
 
 .speaker-image {
-  background-color: red;
   width: 100%;
   height: auto;
   display: flex;
   padding: 10px;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .speaker {
   display: flex;
-  width: 100%;
+  max-width: 70%;
   aspect-ratio: 1 / 1;
+  margin-top: -30px;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.wise-words {
-  background-color: lightblue;
-  height: 60%;
+.wise-words-wrapper{
+  width: 80%;
+  background-color: rgb(247, 211, 11);
   display: flex;
-  flex-direction: row;
-  margin-top: 125px;
+  max-height: 80%;
+  align-items: center;
+  height: auto;
+  max-width: 90%;
+  margin-top: 60px;
   margin-bottom: 10px;
   margin-right: 10px;
-  margin-left: 10px;
+  margin-left: 15px;
+  padding: 10px;
+}
+
+
+.wise-words {
+  background-color: rgb(29, 138, 240);
+  max-height: 80%;
+  height: auto;
+  display: flex;
+  max-width: 90%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 15px;
+  padding: 10px;
+}
+
+.theword {
+  font-family: Mulish, sans-serif;
+  font-weight: 700;
+  color: rgb(51, 50, 49);
 }
 
 .info {
   background-color: yellow;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  column-gap: 5px;
-  row-gap: 5px;
-  height: 40%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   margin-right: 10px;
   margin-left: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.info-header {
+  font-family: Roboto, Arial;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.info-message {
+}
+
+
+
+
+
+
+
+
+
+
+
+.bottom {
+  margin-bottom: 1000px;
 }
