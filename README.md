@@ -6,7 +6,7 @@ KwikSpeak is a web-based learning platform designed to help individuals who stru
 
 ## 🎯 Purpose of KwikSpeak
 
-Many people have great ideas but struggle to communicate them effectively — whether it's in interviews, presentations, or casual conversations. QuickSpeak is built to solve that problem by teaching users how to:
+Many people have great ideas but struggle to communicate them effectively — whether it's in interviews, presentations, or casual conversations. KwikSpeak is built to solve that problem by teaching users how to:
 - Articulate their thoughts properly
 - Speak with clarity and confidence
 - Improve communication using real-life examples and practical lessons
