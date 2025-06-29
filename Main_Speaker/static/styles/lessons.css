@@ -1,0 +1,16 @@
+.content-title {
+  background-color: red;
+  display: flex;
+  height: 40px;
+  max-width: 400px;
+  margin-top: 25px;
+}
+
+.lessons-content {
+  background-color: yellow;
+  margin-top: 40px;
+  display: flex;
+  height: 200px;
+  max-width: 400px;
+  
+}

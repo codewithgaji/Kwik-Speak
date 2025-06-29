@@ -1,5 +1,4 @@
 .header {
-  background-color: white;
   border-bottom-width: 1px;
   position: fixed;
   top: 0;
@@ -9,11 +8,10 @@
   display: grid;
   z-index: 100;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  box-shadow: 3px 2px 0.6px lightgray;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 
@@ -22,49 +20,112 @@
   margin-right: 10px;
 }
 
-.header div:hover {
+/* .header div:hover {
   background-color: gray;
-}
+} */
 
 .home,
 .lessons,
 .quizzes {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  justify-content: start;
+  background-color:rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
   align-items: center;
 }
 
 .home {
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
-.home-icon,
-.logout-icon,
-.quizzes-icon,
-.lessons-icon {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  margin-left: 5px;
+.loginout-page {
+  margin-top: 10px;
+  display: grid;
+  border-radius: 5px;
+  grid-template-columns: 0.5fr 2fr;
+  justify-content: center;
+  align-items: center;
 }
+
+.login-button {
+  cursor: pointer;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: -10px;
+  width: 70px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .login-button {
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 180px;
+    margin-right: -100px;
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  .signup-button {
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: -400px;
+    margin-left: 80px;
+    background-color: yellow;
+    height: 33px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+
+.signup-button {
+  cursor: pointer;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  background-color: yellow;
+  height: 33px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .home-text,
 .lessons-text,
 .quizzes-text {
+  line-height: 32px;
   font-family: Roboto, Arial;
-  font-size: 12px;
-  margin-top: -0.8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #66f805;
 }
 
-.loginout-page {
-  display: flex;
-  margin-right: 5px;
-  justify-content: right;
+/* .loginout-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: stretch;
   align-items: center;
   margin: 5px;
 }
-
+ */
 
 
 
@@ -89,3 +150,20 @@
   padding-right: 5px;
 } */
 
+
+
+
+/* .home-icon,
+.logout-icon,
+.quizzes-icon,
+.lessons-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+} */
+
+/* .logouthome {
+  height: 10px;
+  background-color: lightblue;
+} */

@@ -1,115 +1,51 @@
+{% extends "base.html"%}
+
 {% block content %}
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kwik Speak</title>
-  <link rel="stylesheet" href="{% static 'styles/home.css' %}">
-  <link rel="stylesheet" href="{% static 'styles/header.css' %}">
-  <link rel="stylesheet" href="{% static 'styles/sidebar.css' %}">
-  <link rel="stylesheet" href="{% static 'styles/general.css' %}">
-</head>
-<body>
-  <div class="header">
-    <div class="home">
-      <img class="home-icon" src="{% static 'images/icons/home.png' %}" alt="">
-      <p class="home-text">Home</p>
-    </div>
-    <div class="lessons">
-      <img class="lessons-icon" src="{% static 'images/icons/lesson-icons.jpg' %}" alt="">
-      <p class="lessons-text">Lessons</p>
-    </div>
-    <div class="quizzes">
-      <img class="quizzes-icon" src="{% static 'images/icons/quiz-icon.jpg' %}" alt="">
-      <p class="quizzes-text">Quizzes</p>
-    </div>
-
-    <div class="loginout-page">
-      <form method="POST" action="{% url 'logout' %}" >
-        {% csrf_token %}
-        <button class="logouthome" type="submit">
-          <img class="logout-icon" 
-          src="{% static 'images/icons/logout-icon.png' %}" alt="">
-        </button>
-      </form>
-    </div>                                                                                                                                                                                         
-
-  </div>
-  <div class="sidebar">
-    <div>Bookmarks</div>
-    <div>Quizzes</div>
-    <div>Submissions</div>
-  </div>
-
-  <div class="logo">
-    <img class="kwik-logo1" src="{% static 'images/logo1.png' %}" alt="">
-  </div>
+{% load static %}                                                                                                                                                                         
+  
 
   <div class="content">
     <div class="communication-tips">
-      <div class="bookmarks">
-
-      </div>
 
       <div class="speech-info">
-        <div class="info">
+      {% for tip in tips %}
+        <div class="info fade-in-section">
           <div class="info-header">
-            💡 1. Think Before You Speak
+            {{ tip.tip_title}}
           </div>
           <h4 class="info-message">
-            Take a moment to collect your thoughts. 
-            Organize what you want to say in your mind before you say it. 
-            This helps in delivering your message clearly and confidently, 
-            without rambling. 
+            {{ tip.tip_content }}
           </h4>
         </div>
+        <!-- <div class="content-image">
+          {{ tip.tip_image }}
+        </div> -->
+      {% endfor %}
 
-        <div class="info">
-          <div class="info-header">
-            💡2. Use Simple and Clear Words
-          </div>
-          <h4 class="info-message">
-            Avoid overcomplicating your message with jargon or big words. 
-            Simple language is usually more effective and relatable. 
-            People understand you better when your message is straightforward.
-          </h4>
-          
-        </div>
-        
-        <div class="info">
-          <div class="info-header">
-            💡 3. Practice Active Listening
-          </div>
-          <h4 class="info-message">
-            Engage with the person you’re talking to. 
-            Show that you’re listening by nodding, paraphrasing, or asking clarifying questions. 
-            This builds rapport and helps you respond thoughtfully, 
-            which makes your communication more articulate.
-          </h4>
-          
-        </div>
 
       </div>
 
     </div>
 
-    <div class="orators">
-      <div class="speaker-image">
-        <img class= "speaker" src="{% static 'images/vusi-said.jpg' %}" alt="image not found">
-      </div>
+  <div class="orators">
+    {% for speaker in orator %}
+      <div class="speaker-entry fade">
+        <div class="speaker-image">
+          <img class="speaker" src="{{ speaker.image.url }}" alt="{{ speaker.name }}">
+        </div>
 
-      <div class="wise-words-wrapper">
-        <div class="wise-words">
-          <h4 class="theword">
-            Speaking is not just about conveying information; it's about building relationships,
-            evoking emotions, and inspiring action.
-          </h4>
+        <div class="wise-words-wrapper">
+          <div class="wise-words">
+            <h4 class="theword">
+              {{ speaker.content }}
+            </h4>
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
+  </div>
+</div>
+
   </div>
 
   <div class="rights-reserved">
@@ -125,14 +61,91 @@
   <div class="bottom">
 
   </div>
-</body>
-</html>
+
+
+
+
+<!--THIS IS FOR THE COMMUNICATION TIPS-->
+
+<script>
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach((section, index) => {
+    section.style.transitionDelay = `${index * 0.8}s`; // 0.2s gap between each
+    appearOnScroll.observe(section);
+});
+
+</script>
+
+
+
+
+
+<!--THIS IS FOR THE SPEAKERS-->
+<script>
+  let current = 0;
+  const entries = document.querySelectorAll('.speaker-entry');
+
+  function showNextSpeaker() {
+    entries.forEach((entry, index) => {
+      entry.classList.remove('active');
+      entry.style.display = 'none';
+    });
+
+    entries[current].style.display = 'block';
+    entries[current].classList.add('active');
+
+    current = (current + 1) % entries.length;
+  }
+
+  // Initial display
+  showNextSpeaker();
+
+  // Change every 5 seconds
+  setInterval(showNextSpeaker, 10000);
+</script>
+
 
 {% endblock content %}
 
 
 
 
+
+
+
+        <!-- <div class="info">
+          <div class="info-header">
+            
+          </div>
+          <h4 class="info-message">
+            
+          </h4>
+          
+        </div> -->
+        
+        <!-- <div class="info">
+          <div class="info-header">
+            
+          </div>
+          <h4 class="info-message">
+            
+          </h4>
+          
+        </div> -->
 
 
 

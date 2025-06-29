@@ -8,6 +8,7 @@ body {
 
 
 .logo {
+  margin-top: 7px;
   height: 100px;
   margin-left: 150px;
   margin-right: 150px;
@@ -21,142 +22,95 @@ body {
 .kwik-logo1 {
   max-height: 230%;
   max-width: 300%;
-  margin-top: 50px;
+  margin-top: 70px;
+  margin-left: 50px;
   margin-bottom: 20px;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  column-gap: 10px;
+  grid-template-rows: 1fr 1fr;
   row-gap: 40px;
   width: 100%;
+  grid-template-areas: "second" "first"; 
+  gap: 20px;
 }
 
+@media (min-width: 1000px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: "first second"; /*To manipulate the position of the element - the arrangement of the value in the quotes even determine if it will be stacked vertically ("x" "y") or horizontally ("x  y")*/
+    grid-template-rows: unset;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+
+/* COMMUNICATION TIPS*/
 .communication-tips {
-  background-color: purple;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   column-gap: 10px;
   padding: 10px;
-  justify-content: center;
+  justify-content: stretch;
   align-items:center;
   margin-top: 15px;
+  grid-area: first; /*This is a custom name to manipulate the arrangement of the containers*/
 
 }
 
+@media (min-width: 500px) and (max-width: 900px) {
+  .communication-tips {
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    padding: 10px;
+    justify-content: stretch;
+    align-items:center;
+    margin-left: 15px;
+    margin-top: -75px;
+    grid-area: first; /*This is a custom name to manipulate the arrangement of the containers*/
 
-.orators {
-  width: 100%;
-  height: auto;
-  display: grid;
-  justify-content: right;
-  grid-template-rows: 1fr 1fr;
-  align-items: start;
-  margin-top: 15px;
-  margin-right: 0;
+}
+  
 }
 
-.rights-reserved {
-  background-color: lightgreen;
-  height: 40px;
+
+.speech-info {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  align-items: center;
-  margin-top: 60px;
-  margin-left: 0;
-  margin-bottom: 4px;
-}
-
-.speech-info {
-  background-color: blue;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  row-gap: -10px;
-}
-
-
-/* .bookmarks {
-  background-color: lightblue;
-  height: 580px;
-  display: block;
-  margin-top: 10px;
-  margin-left: 10px;
-} */
-
-.speaker-image {
-  width: 100%;
-  height: auto;
-  display: flex;
-  padding: 10px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-}
-
-.speaker {
-  display: flex;
-  max-width: 70%;
-  aspect-ratio: 1 / 1;
-  margin-top: -30px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.wise-words-wrapper{
-  width: 80%;
-  background-color: rgb(247, 211, 11);
-  display: flex;
-  max-height: 80%;
-  align-items: center;
-  height: auto;
-  max-width: 90%;
-  margin-top: 60px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 15px;
-  padding: 10px;
-}
-
-
-.wise-words {
-  background-color: rgb(29, 138, 240);
-  max-height: 80%;
-  height: auto;
-  display: flex;
-  max-width: 90%;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 15px;
-  padding: 10px;
-}
-
-.theword {
-  font-family: Mulish, sans-serif;
-  font-weight: 700;
-  color: rgb(51, 50, 49);
 }
 
 .info {
   background-color: yellow;
   display: flex;
+  border-radius: 8px;
+  border: 2px solid lightgray;
+  font-family: Roboto, Arial;
+  line-height: 32px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .info-header {
@@ -173,11 +127,135 @@ body {
 
 
 
-
-
-
-
-
-.bottom {
-  margin-bottom: 1000px;
+.orators {
+  width: 100%;
+  height: auto;
+  display: grid;
+  justify-content: start;
+  grid-template-rows: 1fr 1fr;
+  align-items: start;
+  margin-top: 15px;
+  margin-bottom: -300px;
+  margin-right: 0;
+  grid-area: second;
 }
+
+@media (max-width: 1000px) {
+  .orators {
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: start;
+    grid-template-rows: 1fr 1fr;
+    align-items: start;
+    margin-top: 45px;
+    margin-right: 0;
+    grid-area: second;
+}
+}
+
+
+
+.speaker-entry {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.speaker-entry.active {
+  display: block;
+  opacity: 1;
+}
+
+
+
+.speaker-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.speaker {
+  border: 2px solid lightgray ;
+  display: flex;
+  max-width: 50%;
+  aspect-ratio: 1 / 1;
+  margin-top: -30px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.wise-words-wrapper{
+  width: 80%;
+  border-radius: 8px;
+   border: 2px solid lightgray ;
+  background-color: rgb(245, 213, 30);
+  display: flex;
+  max-height: 80%;
+  align-items: center;
+  height: auto;
+  max-width: 90%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 45px;
+  padding: 10px;
+}
+
+
+.wise-words {
+  border: 2px solid lightgray ;
+  background-color: rgb(29, 138, 240);
+  max-height: 80%;
+  height: auto;
+  display: flex;
+  max-width: 90%;
+  flex-direction: row;
+  font-family: Roboto, Arial;
+  line-height: 32px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 15px;
+  padding: 10px;
+}
+
+.theword {
+  font-family: Mulish, sans-serif;
+  font-weight: 700;
+  color: rgb(51, 50, 49);
+}
+
+
+
+
+.rights-reserved {
+  background-color: lightgreen;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 0;
+  margin-bottom: 4px;
+}
+
+
+
+/* .bookmarks {
+  background-color: lightblue;
+  height: 580px;
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+} */

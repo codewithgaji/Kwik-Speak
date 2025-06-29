@@ -59,7 +59,7 @@ ROOT_URLCONF = 'Main_Speaker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'baseapp'/ 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,16 +77,29 @@ WSGI_APPLICATION = 'Main_Speaker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'kwikspeak',
-        'USER': 'kwikspeaklogin',
-        'PASSWORD': 'kwikspeakers.only',
-        'HOST': 'localhost',  # or your remote host
-        'PORT': '5432',       # default PostgreSQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'kwikspeak',
+#         'USER': 'kwikspeaklogin',
+#         'PASSWORD': 'kwikspeakers.only',
+#         'HOST': 'localhost',  # or your remote host
+#         'PORT': '5432',       # default PostgreSQL port
+#     }
+# }
 
 
 # Password validation
@@ -128,6 +141,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
   BASE_DIR / "static"
 ]
+
+MEDIA_URL = '/media/' # This is used when rendering media through django
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
