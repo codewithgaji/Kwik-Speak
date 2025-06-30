@@ -86,6 +86,6 @@ This is a personal project but open to collaboration. If you're interested in de
 
 ## 📬 Contact
 
-Built with passion by **Gaji Yaqub Ayomikun**  
+Built with passion by **Gaji Yaqub Ayomikun**  and **Fuhad Damilola**
 Let’s connect: [@codewithgaji on X](https://x.com/codewithgaji)
 
