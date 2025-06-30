@@ -1,16 +1,208 @@
-.content-title {
-  background-color: red;
-  display: flex;
-  height: 40px;
-  max-width: 400px;
-  margin-top: 25px;
+/* Global Styles */
+section {
+  padding: 40px 20px;
 }
 
-.lessons-content {
-  background-color: yellow;
-  margin-top: 40px;
+/* Hero Section */
+.hero-section {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 50vh;
+}
+
+.hero-content {
+  border: 1px, solid, white;
+  background-color: lightgreen;
+  display: grid;
+  justify-content: stretch;
+  align-items: center;
+  padding: 5px;
+  grid-template-rows: 1.5fr 1fr 1fr;
+}
+
+.hero-content h1 {
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.hero-content p {
+  font-size: 19px;
+  line-height: 35px;
+  font-weight: 500;
+}
+
+.unlock-button {
+   cursor: pointer;
+   border-radius: 5px;
+   background-color: rgb(255, 217, 0);
+   height: 33px;
+   min-width: 130px;
+   font-weight: 600;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 2px 1px 0.8 rgb(180, 178, 178);
+}
+
+
+
+.hero {
+  background-color: green;
   display: flex;
-  height: 200px;
-  max-width: 400px;
-  
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.hero-image {
+  border: 2px solid lightgray ;
+  min-height: 50vh;
+  max-width: 320px;
+}
+
+
+
+
+/* Categories */
+.lesson-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.lesson-section button {
+  margin: 0 10px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.lesson-section button:hover {
+  background-color: #ddd;
+}
+
+.lesson-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.lesson-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+.lesson-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.lesson-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+.lesson-card p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: #e9e507;
+  margin-bottom: 5px;
+}
+.lesson-card a {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.lesson-card a:hover {
+  background-color: #0056b3;
+}
+
+/* Progress Section */
+.progress-content {
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  height: 8px;
+  border-radius: 4px;
+  margin: 10px 0 20px;
+}
+.progress-fill {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+/* Newsletter */
+.newsletter {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+.newsletter input[type="email"] {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.newsletter button:hover {
+  background-color: #222;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.footer-grid h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.footer-grid a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
 }

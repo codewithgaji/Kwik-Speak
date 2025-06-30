@@ -35,7 +35,7 @@ class LessonProgress(models.Model):
   last_viewed = models.DateTimeField(auto_now=True)
   
   def __str__(self):
-    return f"{self.user.username} - {self.lesson.title} - {'Done' if self.completed else 'In Progress'}"
+    return f"{self.user.email} - {self.lesson.title} - {'Done' if self.completed else 'In Progress'}"
 
 
 
