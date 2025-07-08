@@ -4,6 +4,14 @@
 {% load static %}                                                                                                                                                                         
   
 
+
+  <div class="kwikspeak-greetings">
+    <div class="welcome-text" data-text="Welcome to KwikSpeak"></div>
+    <div class="home-words" data-text="A Home where you turn"></div>
+    <div class="thoughts-text" data-text="your Thoughts into"></div>
+    <div class="spoken-text" data-text="Spoken words"></div>
+  </div>
+
   <div class="content">
     <div class="communication-tips">
 
@@ -47,33 +55,6 @@
   </div>
 
 
-  <div class="details">
-    <div class="project-name">
-
-    </div>
-    <div class="project-details">
-      <div class="menu">
-
-      </div>
-      <div class="about-us">
-
-      </div>
-      <div class="contact">
-
-      </div>
-      <div class="social">
-
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="rights-reserved">
-    
-
-  </div>
-  
 
 
 
@@ -130,6 +111,42 @@
   // Change every 5 seconds
   setInterval(showNextSpeaker, 10000);
 </script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll('.kwikspeak-greetings div');
+    const typingSpeed = 100; // speed per letter
+    const delayBetweenTexts = 700; // pause between lines
+
+    let currentElement = 0;
+
+    function typeText(element, text, i, callback) {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            setTimeout(() => typeText(element, text, i + 1, callback), typingSpeed);
+        } else if (callback) {
+            setTimeout(callback, delayBetweenTexts);
+        }
+    }
+
+    function startTyping() {
+        if (currentElement >= elements.length) return;
+
+        const el = elements[currentElement];
+        const fullText = el.getAttribute('data-text'); // get the hidden text
+        el.textContent = ''; // make sure it's empty
+
+        typeText(el, fullText, 0, () => {
+            currentElement++;
+            startTyping();
+        });
+    }
+
+    startTyping();
+});
+</script>
+
 
 
 {% endblock content %}

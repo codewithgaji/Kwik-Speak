@@ -18,6 +18,48 @@
   margin-bottom: 20px;
 }
 
+.kwikspeak-greetings {
+  display: grid;
+  grid-template-rows: 4(1fr, repeat());
+  margin-top: 40px;
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.kwikspeak-greetings div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.welcome-text {
+  line-height: 32px;
+  font-family: Roboto, Arial;
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.home-words {
+  font-size: 180%;
+  font-family: Roboto, Arial;
+  font-weight: 600;
+}
+
+.thoughts-text {
+  font-size: 150%;
+  font-family: Roboto, Arial;
+  font-weight: 600;
+}
+
+.spoken-text {
+  font-size: 130%;
+  font-weight: 600;
+  font-family: Roboto, Arial;
+}
+
 .content {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -55,7 +97,7 @@
 
 /* COMMUNICATION TIPS*/
 .communication-tips {
-  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   column-gap: 10px;
@@ -101,7 +143,8 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .info-header {
@@ -185,7 +228,7 @@
 .wise-words-wrapper{
   width: 80%;
   border-radius: 8px;
-   border: 2px solid lightgray ;
+  border: 2px solid lightgray ;
   background-color: rgb(245, 213, 30);
   display: flex;
   max-height: 80%;
@@ -193,9 +236,8 @@
   height: auto;
   max-width: 90%;
   margin-top: 15px;
-  margin-bottom: 10px;
   margin-right: 5px;
-  margin-left: 45px;
+  margin-left: 65px;
   padding: 10px;
 }
 
@@ -231,7 +273,6 @@
 
 .details {
   background-color: black;
-  margin-top: -40px;
   height: 100vh;
   min-width: 100px;
   display: grid;

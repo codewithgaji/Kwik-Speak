@@ -25,6 +25,19 @@ body {
 
 }
 
+@media (max-width: 800px) {
+  .signup-wrapper {
+    height: 100vh;
+    width: 100%;
+    background: url("/static/images/Speaker-2.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.signup-wrapper
+
 .shadow-wrap {
   margin: 20px;
   display: flex;

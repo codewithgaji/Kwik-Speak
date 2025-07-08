@@ -6,6 +6,9 @@ body {
   min-height: 100vh;               /* ensures full viewport height */
   margin: 0;                   /* removes default body margin */
   padding-top: 50px;
+  max-width: 100vw;
+  overflow-x: hidden;
+
 }
 
 
