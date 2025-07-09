@@ -221,5 +221,63 @@ body {
 
 
 
+/* Mobile setup*/
 
+@media (max-width: 600px) {
+  .signup-wrapper {
+    justify-content: center;
+    padding: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
+  .shadow-wrap {
+    margin: 10px;
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .form-wrap {
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .kwik-logo {
+    width: 80px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .welcome-message {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .missed-you {
+    font-size: 12px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .form-wrap form input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-wrap button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .account-verification, .signup {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+  }
+}

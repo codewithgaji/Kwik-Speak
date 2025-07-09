@@ -28,7 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
   'codewithgaji.pythonanywhere.com',
-  'www.codewithgaji.pythonanywhere.com'
+  'www.codewithgaji.pythonanywhere.com',
+  '127.0.0.1', 
+  'localhost', 
 ]
 
 
